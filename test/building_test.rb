@@ -44,8 +44,10 @@ class BuildingTest < Minitest::Test
       bedrooms: 2})
     renter1 = Renter.new("Aurora")
 
+    building.add_unit(unit1)
     assert_equal [], building.renters
     unit1.add_renter(renter1)
+    # require "pry"; binding.pry
     assert_equal ["Aurora"], building.renters
   end
 end
