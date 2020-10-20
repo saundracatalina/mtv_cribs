@@ -9,5 +9,6 @@ class BuildingTest < Minitest::Test
     building = Building.new
 
     assert_instance_of Building, building
+    assert_equal [], building.units
   end
 end
