@@ -24,7 +24,10 @@ class ApartmentTest < Minitest::Test
       monthly_rent: 1200,
       bathrooms: 1,
       bedrooms: 1})
+    renter1 = Renter.new("Jessie")
+    
+    assert_equal nil, unit1.renter
+    unit1.add_renter(renter1)
 
-    assert_equal nil, unit1.renter 
   end
 end
